@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Read the food data from the CSV file
-df = pd.read_csv('foodsdata.csv')
+df = pd.read_csv('fooddata.csv')
 df = df[['Category','Food Item','Measure','Calories','Protein','Fat','Carbs','Fibre']]
 # Filter out rows containing 'nuts' (case-insensitive) in the 'Food Item' column
 dfnonuts = df.where(~df['Food Item'].str.contains('nuts')).dropna()
